@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="@dimen/single_item_padding_large"
+    android:paddingRight="@dimen/single_item_padding_large">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civUserImage"
+                android:layout_width="@dimen/circle_image_view_large"
+                android:layout_height="@dimen/circle_image_view_large"
+                android:layout_centerHorizontal="true"
+                app:civ_border_color="@color/colorGray"
+                app:civ_border_width="@dimen/border_width"
+                android:layout_marginTop="@dimen/single_item_padding_large"/>
+
+            <TextView
+                android:id="@+id/tvUserDetailsFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/civUserImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/single_item_padding_medium"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_large"/>
+
+            <TextView
+                android:id="@+id/tvUserDetailsGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvUserDetailsFullName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/single_item_padding_medium"
+                android:textSize="@dimen/font_size_medium"/>
+
+            <TextView
+                android:id="@+id/tvUserDetailsAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvUserDetailsGender"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/single_item_padding_medium"
+                android:textSize="@dimen/font_size_medium"/>
+
+            <TextView
+                android:id="@+id/tvUserDetailsBirthDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvUserDetailsAge"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/single_item_padding_medium"
+                android:textSize="@dimen/font_size_medium"/>
+
+            <TextView
+                android:id="@+id/tvUserDetailsRegisteredDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvUserDetailsBirthDate"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/single_item_padding_medium"
+                android:textSize="@dimen/font_size_medium"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilUserDetailsNickName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvUserDetailsRegisteredDate"
+                android:layout_marginTop="@dimen/single_item_padding_large"
+                android:hint="@string/nickname">
+
+                <EditText
+                    android:id="@+id/editTextNickName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="@dimen/font_size_medium"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilUserDetailsPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tilUserDetailsNickName"
+                android:layout_marginTop="@dimen/single_item_padding_small"
+                android:hint="@string/phone">
+
+                <EditText
+                    android:id="@+id/editTextPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:textSize="@dimen/font_size_medium"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilUserDetailsEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tilUserDetailsPhone"
+                android:layout_marginTop="@dimen/single_item_padding_small"
+                android:hint="@string/email">
+
+                <EditText
+                    android:id="@+id/editEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:textSize="@dimen/font_size_medium"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilUserDetailsCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tilUserDetailsEmail"
+                android:layout_marginTop="@dimen/single_item_padding_small"
+                android:hint="@string/city">
+
+                <EditText
+                    android:id="@+id/editTextCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="@dimen/font_size_medium"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/single_item_padding_large"
+        android:src="@drawable/ic_phone_white_0"/>
+
+</RelativeLayout>

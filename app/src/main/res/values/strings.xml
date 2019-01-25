@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">axon</string>
+    <string name="seed">football</string>
+    <string name="random_users">Users</string>
+    <string name="details">Details</string>
+    <string name="years_old">years old</string>
+    <string name="profile">Profile</string>
+    <string name="registeredFrom">registered from</string>
+    <string name="nickname">Nickname</string>
+    <string name="phone">Phone</string>
+    <string name="email">Email</string>
+    <string name="city">City</string>
+
+</resources>
